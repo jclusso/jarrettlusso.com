@@ -1,0 +1,105 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  transition: 1s background-image;
+}
+
+.responsive-container {
+  width: 100%;
+  position: relative;
+}
+
+.dummy {
+  padding-top: 45%;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container:before {
+  vertical-align: middle;
+  content: ' ';
+  display: inline-block;
+  height: 65%;
+}
+
+.container div {
+  margin-top: 50px;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0 2%;
+}
+
+.container div a {
+  display: block;
+  margin-top: 100px;
+}
+
+.container div a img {
+  width: 100%;
+  max-width: 400px;
+}
+
+#social {
+  margin: 40px auto 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 1;
+  padding: 20px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.35);
+  line-height: 25px;
+}
+
+#social a {
+  transition: all .15s ease-in-out;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  border-bottom: 3px solid transparent;
+  display: inherit;
+}
+
+#social a:hover {
+  transition: all .15s ease-in-out;
+  border-bottom: 2px solid white;
+}
+
+a#name {
+  transition: all .15s ease-in-out;
+}
+
+a#name:hover {
+  transition: all .15s ease-in-out;
+  opacity: 0.60;
+}
+
+
+#footer {
+  position: absolute;
+  bottom: 20px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  opacity: 0.5;
+}
