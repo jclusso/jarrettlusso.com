@@ -6,20 +6,77 @@ body {
 }
 
 body {
-  background-size: cover;
+  background: black;
   text-align: center;
-  background-position: center;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  transition: 1s background-image;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.2);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% { opacity: 0; }
+}
+
+.bg-slideshow,
+.bg-slideshow:after {
+  position: fixed;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.bg-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 40s linear infinite 0s;
+}
+
+.bg-slideshow li:nth-child(1) span {
+  background-image: url(../images/bg1.jpg)
+}
+.bg-slideshow li:nth-child(2) span {
+  background-image: url(../images/bg2.jpg);
+  animation-delay: 10s;
+}
+.bg-slideshow li:nth-child(3) span {
+  background-image: url(../images/bg3.jpg);
+  animation-delay: 20s;
+}
+.bg-slideshow li:nth-child(4) span {
+  background-image: url(../images/bg4.jpg);
+  animation-delay: 30s;
 }
 
 .responsive-container {
   width: 100%;
   position: relative;
-}
-
-.dummy {
-  padding-top: 45%;
 }
 
 .container {
@@ -59,7 +116,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 1;
-  padding: 20px 15px;
+  padding: 10px;
   border-radius: 5px;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.35);
@@ -88,7 +145,6 @@ a#name:hover {
   transition: all .15s ease-in-out;
   opacity: 0.60;
 }
-
 
 #footer {
   position: absolute;

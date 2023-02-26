@@ -2,14 +2,20 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarrett Lusso - Internet Entrepreneur</title>
     <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <div class="responsive-container">
-      <div class="dummy"></div>
+    <ul class="bg-slideshow">
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+    </ul>
 
+    <div class="responsive-container">
       <div class="container">
         <div>
           <a href="https://jarrettlusso.com" title="Jarrett Lusso - Internet Entrepreneur">
@@ -20,7 +26,6 @@
             <a href="http://github.com/jclusso" target="_blank" title="GitHub">GitHub</a>
             <a href="http://twitter.com/jarrettlusso" target="_blank" title="Twitter">Twitter</a>
             <a href="http://linkedin.com/in/jarrettlusso" target="_blank" title="LinkedIn">LinkedIn</a>
-            <a href="http://snapchat.com/add/jarrettlusso" target="_blank" title="Snapchat">Snapchat</a>
           </div>
         </div>
       </div>
@@ -42,20 +47,6 @@
 
       ga('create', 'UA-19281545-4', 'jarrettlusso.com');
       ga('send', 'pageview');
-
-      function randomBGIndex() {
-        return Math.floor(Math.random() * 4) + 1
-      }
-      function setBackground() {
-        var index;
-        while (index == window.currentBGIndex || index == undefined) {
-          index = randomBGIndex();
-        };
-        window.currentBGIndex = index
-        document.body.style.backgroundImage = `url('images/bg${window.currentBGIndex}.jpg')`;
-        setTimeout(() => { setBackground() }, 10000);
-      }
-      setBackground()
     </script>
   </body>
 
